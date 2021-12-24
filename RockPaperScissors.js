@@ -38,7 +38,15 @@ function fullRound(){
         The score is player ${playerWin - 1} to computer ${computerWin - 1}`;
     }
         
-    return roundResult();
+    console.log(roundResult());
 }
 
-console.log(fullRound())
+function game(){
+    fullRound();
+    fullRound();
+    fullRound();
+    fullRound();
+    fullRound();
+}
+
+game()
