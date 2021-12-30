@@ -40,7 +40,8 @@ function fullRound(){
             if(result === "Player Wins!"){
                 playerWin ++;
             } else if (result === "Computer Wins!"){
-                computerWin ++;}
+                computerWin ++;
+            }
         
         return `You played ${playerSelection}
         Computer played ${computerSelection}
@@ -51,13 +52,3 @@ function fullRound(){
     console.log(roundResult());
 }
 
-//game to five, will update to while loop
-function game(){
-    fullRound();
-    fullRound();
-    fullRound();
-    fullRound();
-    fullRound();
-}
-
-game()
