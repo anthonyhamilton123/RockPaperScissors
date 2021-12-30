@@ -27,12 +27,12 @@ let computerWin = 1;
 let playerWin = 1;
 
 //this function defines the full scope of the round
-function fullRound(){
+function fullRound(buttonSelection){
     const computerSelection = computerPlay();
 
     //prompt for the player to select rock, paper, scissors
     //could add a way for invalid input
-    let playerSelection = prompt("rock, paper, scissors?");
+    let playerSelection = buttonSelection;
 
     //adds to the respective win column
     function roundResult(){
@@ -52,3 +52,7 @@ function fullRound(){
     console.log(roundResult());
 }
 
+const rockBtn = document.querySelector('#rockButton');
+rockBtn.addEventListener('click', () => {
+    fullRound("rock");
+});
