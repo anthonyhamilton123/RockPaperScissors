@@ -43,13 +43,14 @@ function fullRound(buttonSelection){
                 computerWin ++;
             }
         
-        return `You played ${playerSelection}
-        Computer played ${computerSelection}
-        ${result} 
-        The score is player ${playerWin - 1} to computer ${computerWin - 1}`;
+        return `You played ${playerSelection}.
+        Computer played ${computerSelection}.
+        \n ${result}. 
+        \n The score is player ${playerWin - 1} to computer ${computerWin - 1}`;
     }
-        
-    console.log(roundResult());
+    
+    const divResult = document.querySelector('#results')
+    divResult.textContent = `${roundResult()}`
 }
 
 
