@@ -45,14 +45,23 @@ function fullRound(buttonSelection){
         
         return `You played ${playerSelection}.
         Computer played ${computerSelection}.
-        \n ${result}. 
-        \n The score is player ${playerWin - 1} to computer ${computerWin - 1}`;
+        ${result}`;
     }
     
-    const divResult = document.querySelector('#results')
-    divResult.textContent = `${roundResult()}`
-}
+    const divResult = document.querySelector('#results');
+    divResult.textContent = `${roundResult()}`;
 
+    const divScore = document.querySelector('#score');
+    divScore.textContent = `The score is player ${playerWin - 1} to computer ${computerWin - 1}`;
+
+    if(playerWin > 5){
+        const winDiv = document.querySelector('#win');
+        winDiv.textContent = 'Player wins!'
+    } if(computerWin > 5){
+        const winDiv = document.querySelector('#win');
+        winDiv.textContent = 'Computer wins!'
+    }
+}
 
 //Buttons that run rounds
 const rockBtn = document.querySelector('#rockButton');
