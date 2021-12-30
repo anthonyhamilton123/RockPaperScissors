@@ -52,7 +52,19 @@ function fullRound(buttonSelection){
     console.log(roundResult());
 }
 
+
+//Buttons that run rounds
 const rockBtn = document.querySelector('#rockButton');
 rockBtn.addEventListener('click', () => {
     fullRound("rock");
+});
+
+const paperBtn = document.querySelector('#paperButton');
+paperBtn.addEventListener('click', () => {
+    fullRound("paper");
+});
+
+const scissorsBtn = document.querySelector('#scissorsButton');
+scissorsBtn.addEventListener('click', () => {
+    fullRound("scissors");
 });
